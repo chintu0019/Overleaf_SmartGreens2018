@@ -1,0 +1,45 @@
+\section{Challenges and Requirements}
+
+Challenges in Usage Data
+
+However, there are challenges in analyzing program logs in
+order to understand a system’s behaviors. The program logic of a system usually has a lot of branches, and thus the system’s behaviors may be quite different under different input data or environmental conditions. Knowing the execution behavior under different inputs or configurations can greatly help system operators to understand system behaviors. However, there may be a large number of different combinations of inputs or parameters under different system behaviors. Such complexity poses difficulties for analyzing contextual information related to the state of interest. To address this challenge, in this paper, we propose a new
+approach for the contextual analysis of program logs to better understand a system’s behaviors. In particular, we use execution patterns to represent the execution structures reflected by program logs, and propose an algorithm to mine execution patterns from the program logs. The mined execution patterns correspond to different execution paths of the system. Based on the execution patterns, our approach further learns the essential contextual factors (e.g., occurrences of specific program logs with specific parameter values) that cause a specific branch or path to be executed by the system. The mining and learning results can help system operators understand the execution logic and behaviors of a software system for their various maintenance tasks such as system problem diagnosis. This paper makes the following research contributions: ? We conduct Formal Concept Analysis (FCA) [4] to analyze log messages, and construct a concept lattice graph. The learned graph is used to mine execution patterns and to model relationships among different execution patterns. Such relationships represent branch structures in the program execution logic.
+? Based on the lattice graph, we propose a feature extraction technique and use decision trees to learn branch conditions. The learned branch conditions reveal essential contextual factors that determine which code branches the system will take at bifurcation points.
+
+Ahuge wealth of various data exists in the software development
+process, and hidden in the data is information about the quality of software and services as well as the dynamics of software develop- ment. With various analytic technologies (e.g., data mining, ma- chine learning, and information visualization), software analytics is to enable software practitioners
+
+
+Challenges in Analytics
+
+Unfortunately, despite the advantages provided by analytical solutions, the solution implementation is usually very costly, which hinders enterprises, especially the SMBs (Small and Medium Business), to start such projects. Typically, an enterprise is required to first build a large
+storage system to store huge volumes of data collected from various data sources and channels; after that, the enterprise should buy expensive analytics software, and a large number of server machines, because the analytical programs often need mining huge amounts of data or executing complex learning algorithms. Moreover, the computational resource demand pattern of analytical solutions may be uneven with spikes (e.g., predicting product sale when a financial quarter is over or some unusual events happen), which means the enterprise has to pay a lot to maintain the complex software and hardware only for occasional usages. As a result, the systematical adoption of analytical
+solution is currently
+limited to only a small number of large enterprises. On the other hand, the analytical solution vendors also
+find it is difficult to deliver cost-effective solutions. Because analytical solutions
+require continuous model validation,
+tuning, and update according to the changing business context,
+it is hard for the solution vendors to control
+the
+travel expenditure in sending analysts to conduct incremental services in the customer site. In a word, a cost-effective delivery model becomes an
+important
+issue to accelerate the prevalence of analytical
+solutions. Currently, SaaS delivery model is well-studied to enable business clients consume applications at a low cost based on their usage [1], and cloud computing is considered as a promising technology to provide on demand storage and computational resources flexibly [2]. Accordingly, there are several
+relevant research efforts which have focused on
+leveraging these technologies to facilitate analytical solution delivery [3][4]. However, most of the projects are ad-hoc, that is, each of them is
+specific to a certain analytical
+application domain, and there is still lack of a comprehensive study to identify the differences between existing analytical solution delivery and analytics-as-a-service delivery, as well as a technical framework to handle the technical challenges introduced by the new delivery model.
+
+
+--------------------
+
+Software analysis in order to obtain insightful and actionable information for data-driven tasks around software and services Insightful information is information that conveys meaningful
+and useful understanding or knowledge towards performing the tar- get task. Typically insightful information is not easily attainable by directly investigating the raw data without aid of analytic technolo- gies. Actionable information is information upon which software practitioners can come up with concrete solutions (better than ex- isting solutions if any) towards completing the target task. Developing a software analytic project typically goes through it-
+erations of the life cycle of four phases: task definition, data prepa- ration, analytic-technology development, and deployment and feed- back gathering. Task definition is to define the target task to be as- sisted by software analytics. Data preparation is to collect data to be analyzed. Analytic-technology development is to develop prob- lem formulation, algorithms, and systems to explore, understand, and get insights from the data. Deployment and feedback gather- ing involves two typical scenarios. One is that, as researchers, we have obtained some insightful information from the data and we would like to ask domain experts to review and verify. The other is that we ask domain experts to use the analytic tools that we have developed to obtain insights by themselves. Most of the times it is the second scenario that we want to enable. Among various analytic technologies,machine learning is awell-
+recognized technology for learning hidden patterns or predictive models from data. It plays an important role in software analyt- ics. In this position paper, we argue that when applying analytic technologies in practice of software analytics, one should
+
+incorporate a broad spectrum of domain knowledge and ex- pertise, e.g.,management, machine learning, large-scale data processing and computing, and information visualization;
+• investigate how practitioners take actions on the produced insightful and actionable information, and provide effective support for such information-based action taking.
+Our position is based on a number of software analytic projects
+that have been conducted at the Software Analytics (SA) group3 at Microsoft Research Asia (MSRA) in recent years (in the rest of this paper, we refer to members of the software analytic projects at MSRA as the SA project teams). These software analytic projects have undergone successful technology transferwithinMicrosoft for enabling informed decision making and improving quality of soft- ware and services. We expect that our position will provide useful
