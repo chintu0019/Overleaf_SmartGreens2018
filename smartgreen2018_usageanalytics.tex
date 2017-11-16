@@ -10,11 +10,12 @@
 \usepackage{multicol}
 \usepackage{pslatex}
 \usepackage{apalike}
-\usepackage{flushend}
+%\usepackage{flushend}
 \graphicspath{{figures/}}
 
 \usepackage{SCITEPRESS}     % Please add other packages that you may need BEFORE the SCITEPRESS.sty package.
 
+\newcommand{\anonymise}[1]{[Anonymised for review]}
 \subfigtopskip=0pt
 \subfigcapskip=0pt
 \subfigbottomskip=0pt
@@ -23,9 +24,10 @@
 
 \title{Discover Insights from Cloud-based Applications based on Usage~Analytics}
 
-\author{\authorname{Duc-Tien Dang-Nguyen, Manoj Kesavulu, and Markus Helfert}
-\affiliation{LERO, Dublin City University}
-\email{\{duc-tien.dang-nguyen, markus.helfert\}@dcu.ie; manoj.kesavulu@lero.ie}
+\author{\authorname{\anonymise{Duc-Tien Dang-Nguyen, Manoj Kesavulu, and Markus Helfert}}
+\affiliation{\anonymise{Lero –-- Irish Software Research Organization}}
+\affiliation{\anonymise{School of Computing, Dublin City University, Dublin, Ireland}}
+\email{\anonymise{\{duc-tien.dang-nguyen, markus.helfert\}@dcu.ie; manoj.kesavulu@lero.ie}}
 }
 
 \keywords{Usage Analytics, Cloud-based Applications, User Satisfaction, Resource Provision}
@@ -48,10 +50,9 @@
 In this paper we presented the challenges in getting insights from cloud based applications. We pointed out analytical solutions of how to overcome these challenges by exploiting the usage data. Some potential applications were also discussed.
 
 \section*{\uppercase{Acknowledgements}}
+\noindent This work was supported with the financial support of the \anonymise{Science Foundation Ireland grant 13/RC/2094} and co-funded under the \anonymise{European Regional Development Fund through the Southern \& Eastern Regional Operational Programme} to \anonymise{Lero - the Irish Software Research Centre (www.lero.ie)}.
 
-blah blah
-
-\vfill
+%\vfill
 \bibliographystyle{apalike}
 {\small
 \bibliography{refs}}
